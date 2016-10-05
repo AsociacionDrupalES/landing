@@ -1,0 +1,12 @@
+global-css:
+  css:
+    theme:
+      css/main.css: {}
+
+global-js:
+  header: true
+  js:
+    js/da-vinci.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
