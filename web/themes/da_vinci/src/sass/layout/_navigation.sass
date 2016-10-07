@@ -1,0 +1,38 @@
+.region-primary-menu
+  nav
+    position: relative
+    ul.menu
+      display: none
+      +breakpoint($medium)
+        display: block
+        li
+          display: inline-block
+          margin-right: 10px
+      &.active
+        display: block
+        position: absolute
+        background: red
+        +breakpoint($medium)
+          position: static
+    .burger
+      +burger(25px, 3px, 5px, #222)
+      +breakpoint($medium)
+        display: none
+      &.active
+        +burger-to-cross
+      &-circle
+        position: relative
+        display: block
+        width: 25px
+        height: 19px
+        margin: 0 auto
+        background-color: red
+        cursor: pointer
+        overflow: hidden
+        +breakpoint($medium)
+          display: none
+
+.region-secondary-menu
+  nav
+    ul.menu
+      li
