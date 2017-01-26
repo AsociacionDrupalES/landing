@@ -1,9 +1,9 @@
-uuid: 6f961e19-1e0a-4c97-baaf-43937d5eb259
+uuid: 84bc76e1-3622-4e5e-b2f4-dd6b0c2f717a
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.user.teaser
+    - core.entity_view_mode.user.full
     - field.field.user.user.field_register_drupal_link
     - field.field.user.user.field_register_drupal_name
     - field.field.user.user.field_register_name
@@ -13,13 +13,13 @@ dependencies:
     - image
     - linked_field
     - user
-id: user.user.teaser
+id: user.user.full
 targetEntityType: user
 bundle: user
-mode: teaser
+mode: full
 content:
-  field_register_drupal_name:
-    weight: 2
+  field_register_name:
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
@@ -31,14 +31,8 @@ content:
         advanced:
           target: _blank
     type: string
-  field_register_name:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
   field_register_picture:
+    type: image
     weight: 0
     label: hidden
     settings:
@@ -49,9 +43,8 @@ content:
         linked: '1'
         type: custom
         destination: '[user:field_register_drupal_link:uri]'
-        advanced:
-          target: _blank
-    type: image
+        advanced: {  }
 hidden:
   field_register_drupal_link: true
+  field_register_drupal_name: true
   member_for: true
