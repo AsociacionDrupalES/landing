@@ -89,9 +89,11 @@
     {{ title_suffix }}
   </header>
   <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+    {#
     <div class="session--speakers">
       {{ content['field_user_ref'] }}
     </div>
+    #}
     <div class="session--sumary">
       {{ content['field_session_type'] }}
       {{ content['field_session_level'] }}
