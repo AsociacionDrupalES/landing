@@ -94,7 +94,8 @@
           {{ content|without('field_image') }}
           {#{% if display_submitted %}#}
           <div class="node__meta">
-              {{ date }}
+              {% set createdDate = node.getCreatedTime|format_date('teaser_date_format') %}
+              {{ createdDate }}
           </div>
           {#{% endif %}#}
       </div>

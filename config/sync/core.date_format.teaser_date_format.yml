@@ -1,0 +1,8 @@
+uuid: ef1895d4-acaf-4815-a60a-ddff6ffb3dd9
+langcode: en
+status: true
+dependencies: {  }
+id: teaser_date_format
+label: 'Teaser date format'
+locked: false
+pattern: d.m.Y
